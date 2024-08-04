@@ -1,0 +1,14 @@
+alias ls='lsd'
+alias l='lsd'
+alias ll='lsd -l'
+alias la='lsd -a'
+alias lla='lsd -la'
+alias lt='lsd --tree'
+alias grep='rg'
+
+source <(command fx --init)
+
+eval "$(sheldon source)"
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
