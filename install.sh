@@ -17,8 +17,8 @@ if ! chezmoi="$(command -v chezmoi)"; then
 		exit 1
 	fi
 	sh -c "${chezmoi_install_script}" -- -b "${bin_dir}"
-	unset chezmoi_install_script bin_dir
 	export PATH=$PATH:${bin_dir}
+	unset chezmoi_install_script bin_dir
 fi
 
 # POSIX way to get script's dir: https://stackoverflow.com/a/29834779/12156188
