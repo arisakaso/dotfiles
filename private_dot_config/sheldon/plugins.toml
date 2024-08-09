@@ -26,8 +26,6 @@ inline = eval "$(starship init zsh)"
 [plugins.zoxide]
 inline = eval "$(zoxide init zsh)"
 
-[plugins.felix]
-inline = source <(command fx --init)
 
 # For example:
 #
