@@ -20,6 +20,15 @@ github = "zsh-users/zsh-autosuggestions"
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
 
+[plugins.starship]
+inline = eval "$(starship init zsh)"
+
+[plugins.zoxide]
+inline = eval "$(zoxide init zsh)"
+
+[plugins.felix]
+inline = source <(command fx --init)
+
 # For example:
 #
 # [plugins.base16]

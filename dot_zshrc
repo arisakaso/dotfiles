@@ -7,10 +7,4 @@ alias lt='lsd --tree'
 alias grep='rg'
 alias ps='procs'
 alias cat='bat'
-
-source <(command fx --init)
-
 eval "$(sheldon source)"
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-
