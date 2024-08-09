@@ -1,0 +1,7 @@
+[user]
+    name = "Sohei Arisaka"
+    email = arisakas@kajima.com
+[push]
+	default = current
+[init]
+	defaultBranch = main

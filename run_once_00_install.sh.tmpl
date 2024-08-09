@@ -1,4 +1,5 @@
 #!/bin/sh
+{{- if eq .chezmoi.os "linux" -}}
 apt-get update
 apt-get install -y zsh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y # rust
@@ -11,3 +12,4 @@ cargo install lsd
 cargo install ripgrep
 cargo install fd-find
 cargo install procs
+{{- end -}}
