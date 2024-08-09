@@ -5,6 +5,8 @@ alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
 alias grep='rg'
+alias ps='procs'
+alias cat='bat'
 
 source <(command fx --init)
 
