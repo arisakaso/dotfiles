@@ -21,10 +21,10 @@ github = "zsh-users/zsh-autosuggestions"
 github = "zsh-users/zsh-syntax-highlighting"
 
 [plugins.starship]
-inline = eval "$(starship init zsh)"
+inline = 'eval "$(starship init zsh)"'
 
 [plugins.zoxide]
-inline = eval "$(zoxide init zsh)"
+inline = 'eval "$(zoxide init zsh)"'
 
 
 # For example:
