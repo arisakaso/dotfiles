@@ -7,6 +7,8 @@ alias lt='lsd --tree'
 alias grep='rg'
 alias ps='procs'
 alias cat='bat'
+alias du='dust'
+alias df='duf'
 
 export EDITOR=code
 

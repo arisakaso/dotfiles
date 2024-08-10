@@ -1,7 +1,7 @@
 #!/bin/bash
 {{ if eq .chezmoi.os "linux" }}
 apt-get update
-apt-get install -y zsh fzf chafa
+apt-get install -y zsh fzf chafa duf
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y # rust
 source $HOME/.cargo/env
 cargo install sheldon --locked
@@ -13,4 +13,5 @@ cargo install lsd
 cargo install ripgrep
 cargo install fd-find
 cargo install procs
+cargo install du-dust
 {{ end }}
