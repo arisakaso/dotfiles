@@ -23,6 +23,7 @@ cargo install du-dust
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+softwareupdate --install-rosetta --agree-to-license
 brew bundle --file="$HOME/.Brewfile" # assume brew is installed
 
 defaults write -g ApplePressAndHoldEnabled -bool false
