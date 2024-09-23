@@ -19,6 +19,8 @@ cargo install du-dust
 
 # macOS
 {{ if eq .chezmoi.os "darwin" }}
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew bundle --file="$HOME/.Brewfile" # assume brew is installed
 
