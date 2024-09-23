@@ -1,6 +1,7 @@
+#!/bin/bash
+
 # Linux
 {{ if eq .chezmoi.os "linux" }}
-#!/bin/bash
 apt-get update
 apt-get install -y zsh fzf chafa duf gh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y # rust
