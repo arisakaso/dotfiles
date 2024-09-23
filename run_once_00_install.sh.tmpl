@@ -1,4 +1,5 @@
 #!/bin/bash
+# Linux
 {{ if eq .chezmoi.os "linux" }}
 apt-get update
 apt-get install -y zsh fzf chafa duf gh
@@ -14,4 +15,15 @@ cargo install ripgrep
 cargo install fd-find
 cargo install procs
 cargo install du-dust
+{{ end }}
+
+# macOS
+{{ if eq .chezmoi.os "darwin" }}
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew bundle --file="$HOME/.Brewfile"
+
+defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write -g KeyRepeat -int 1
+defaults write -g InitialKeyRepeat -int 12
+
 {{ end }}
