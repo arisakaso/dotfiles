@@ -1,6 +1,6 @@
-#!/bin/bash
 # Linux
 {{ if eq .chezmoi.os "linux" }}
+#!/bin/bash
 apt-get update
 apt-get install -y zsh fzf chafa duf gh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y # rust
@@ -20,6 +20,7 @@ cargo install du-dust
 # macOS
 {{ if eq .chezmoi.os "darwin" }}
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle --file="$HOME/.Brewfile"
 
 defaults write -g ApplePressAndHoldEnabled -bool false
