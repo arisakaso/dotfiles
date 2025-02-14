@@ -3,7 +3,7 @@
 # Linux
 {{ if eq .chezmoi.os "linux" }}
 apt-get update
-apt-get install -y zsh fzf chafa duf gh
+apt-get install -y zsh fzf chafa duf gh cmake
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y # rust
 source $HOME/.cargo/env
 cargo install sheldon --locked
