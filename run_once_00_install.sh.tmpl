@@ -7,7 +7,7 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 {{ if eq .chezmoi.os "linux" }}
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew bundle --file="$HOME/.Brewfile_common" 
-brew bundle --file="$HOME/.Brewfile_linux" 
+# brew bundle --file="$HOME/.Brewfile_linux" 
 
 {{ end }}
 
