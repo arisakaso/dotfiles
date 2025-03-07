@@ -1,21 +1,23 @@
 #!/bin/bash
 
 # common
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Linux
 {{ if eq .chezmoi.os "linux" }}
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-brew bundle --file="$HOME/.Brewfile_common" # assume brew is installed
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+brew bundle --file="$HOME/.Brewfile_common" 
+brew bundle --file="$HOME/.Brewfile_linux" 
+
 {{ end }}
 
 # macOS
 {{ if eq .chezmoi.os "darwin" }}
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
+brew bundle --file="$HOME/.Brewfile_common" 
+brew bundle --file="$HOME/.Brewfile_mac" 
 
 softwareupdate --install-rosetta --agree-to-license
-brew bundle --file="$HOME/.Brewfile" # assume brew is installed
 
 defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write -g KeyRepeat -int 1
