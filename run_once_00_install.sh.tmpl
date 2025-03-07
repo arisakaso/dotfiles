@@ -1,21 +1,12 @@
 #!/bin/bash
 
+# common
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # Linux
 {{ if eq .chezmoi.os "linux" }}
-apt-get update
-apt-get install -y zsh fzf chafa duf gh cmake
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y # rust
-source $HOME/.cargo/env
-cargo install sheldon --locked
-cargo install starship --locked
-cargo install zoxide --locked
-cargo install lsd --locked
-cargo install --locked --git https://github.com/sxyazi/yazi.git yazi-fm yazi-cli
-cargo install bat
-cargo install ripgrep
-cargo install fd-find
-cargo install procs
-cargo install du-dust
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+brew bundle --file="$HOME/.Brewfile_common" # assume brew is installed
 {{ end }}
 
 # macOS
