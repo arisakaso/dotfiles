@@ -1,3 +1,5 @@
+# aiases
+alias zshconfig="code ~/.zshrc"
 alias ls='lsd'
 alias l='lsd'
 alias ll='lsd -l'
